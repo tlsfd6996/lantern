@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <head>
+
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      <script type="text/javascript" src="/js/tabmenu.js"></script>
+      <script type="text/javascript">
+        $(function(){
+          $(.'id_check_button'.click(function(){
+            $.ajax({  //ajax실행부분
+              type:"post",
+              url:"./checkid.php",
+              data:{
+                id:$('#id').val()
+              },
+              success : function s(a){ $('.join_input').html(a); },
+              error : function error(){ alert('시스템 문제발생');}
+            });
+          }));
+        });
+      </script>
+
+      <title>LANTERN</title>
+
+      <!-- Bootstrap Core CSS -->
+
+      <link href="css/join.css" rel="stylesheet">
+
+
+</head>
+  <div class="div_wrap">
+
+    <div class="content">
+
+
+            <div class="d2">
+              <form method="post" name="join_form" action="join.php">
+                <table name="join_table" border="1" class="join_table" cellspacing="3" cellpadding="3">
+                  <tr><td><input type="text" name="id" class="join_input" id="input_id"placeholder="UserID">
+                    <input type="button" value="CHECK" class="id_check_button"></td></tr>
+                  <tr><td><input type="password" name="password" class="join_input" placeholder="Password"></td></tr>
+                  <tr><td><input type="password" name="password_check" class="join_input" placeholder="Password Check"></td></tr>
+                  <tr><td><input type="text" name="email" class="join_input" placeholder="Email"></td></tr>
+                  <tr><td><input type="text" name="phone" class="join_input" placeholder="Phone"></td></tr>
+                  <tr><td><input type="text" name="gender" class="join_input" placeholder="Email"gender></td></tr>
+                  <tr><td><input type="text" name="certified" class="join_input" placeholder="Certified"></td></tr>
+                  <tr><td><input type="text" name="BirthDay" class="join_input" placeholder="BirthDay"></td></tr>
+                  <tr><td><input type="submit" value="JOIN" class="btn join_btn">
+                    <input type="reset" value="RESET" class="btn reset_btn">
+                  </td></tr>
+                </table>
+              </form>
+            </div>
+
+
+
+    </div>
+  </div>
+
+
+  <footer>
+
+  </footer>
+
+</body>

@@ -1,0 +1,203 @@
+
+.container>.navbar-header {
+    margin-right: 0px;
+    margin-left: 0px;
+    text-align: left;
+}
+.bottomnav {
+    z-index: 9999;
+    background-color: #1485cc;
+    border-radius: 0;
+}
+
+p.reservation-btn {
+    text-align: center;
+    color: white;
+    margin: 0;
+    font-size: medium;
+    font-weight: bolder;
+}
+
+.detail {
+    padding-bottom: 13%;
+    border-bottom: 2px solid #e4e4e4;
+}
+
+/*header*/
+.marginedcontainer {
+    margin-top: 0%!important;
+}
+.detailuser {
+    font-size: 18px;
+    text-align: left;
+    color: black;
+    margin-bottom: 2%;
+}
+
+img.headerimg {
+    width: 28%;
+}
+
+.detailheader {
+    text-align: center;
+}
+
+p.detailuserid {
+    margin: 0 0 1% 7%;
+    font-size: smaller;
+}
+
+img.doticon {
+    width: 42%;
+    float: right;
+    margin-right: 30%;
+}
+
+/*icons*/
+
+img.detail_icons {
+    width: 6%;
+    margin: 0 1.5%;
+}
+
+th.tabledoticon {
+  width: 15%;
+}
+
+
+/*body*/
+
+.detailbody {
+    margin: 4% 4% 10% 4%;
+}
+
+.detailbodyicons {
+    text-align: right;
+}
+
+.detailbodyheader {
+    margin-bottom: 5%;
+}
+
+.like {
+    padding-top: 1%;
+    margin-left: 3%;
+    float: left;
+}
+
+.detailtitletext {
+  font-size: medium;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 3%;
+}
+
+.bodytext {
+   ;
+}
+
+table.bodytable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #cecece;
+    margin-top:3%;
+}
+
+table.bodytable th, table.bodytable td {
+    border: 1px solid white;
+    height: 30px;
+}
+
+th.tablehead {
+    width: 26%;
+    font-size: smaller;
+    padding-left: 3%;
+}
+
+td.tablebody {
+    font-size: smaller;
+    padding-left: 3%;
+}
+
+/*comment*/
+
+.comments {
+    border-top: 1px solid #d4d4d4;
+}
+
+.comment {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+table.comment_table {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+th.comment_profileicon {
+    width: 20%;
+}
+
+th.comment_id {
+    width: 30%;
+}
+
+th.comment_date {
+    font-size: small;
+    color: #4a4a44;
+}
+
+th.comment_edit {
+    text-align: right;
+    padding-right: 2%;
+    padding-bottom: 3%;
+}
+
+img.detail_edit_icons {
+    width: 15%;
+    margin: 0 3%;
+}
+
+
+/*comment edit*/
+
+.commnetuserprofile {
+    float: left;
+    margin-left: 2%;
+    margin-top: -0.5%;
+}
+
+.comment_textedit {
+    margin: 3% 4% 5% 4%;
+    text-align: right;
+}
+
+input[type="text"] {
+    width: 84%;
+    height: 34px;
+    background: #cecece;
+    border: 0px;
+    border-radius: 20px;
+    padding-left: 6%;
+}
+
+.comment_okbth {
+    width: 11%;
+    position: relative;
+    left: 76%;
+    bottom: 46px;
+}
+
+input[type="button"] {
+    width: 150%;
+    border: 0px;
+    background-color: #fcee21;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.add_comment {
+    margin-bottom: -4%;
+}

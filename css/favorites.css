@@ -1,0 +1,35 @@
+.div_root{
+  margin:auto;
+  width:100%;
+}
+.left_div {
+    position: relative;
+
+    width: 50%;
+    float: left;
+    height: 600PX;
+    display: block;
+}
+.right_div {
+    position: relative;
+
+    width: 50%;
+    float: left;
+    height: 600PX;
+    display: block;
+}
+img.favorites_photo{
+    position: relative;
+    width: 90%;
+    margin-left: 7%;
+    margin-top: 7%;
+}
+p.favorites_id {
+    margin-left: 7%;
+    margin-right: 3%;
+    text-align: center;
+    background-color: darkgray;
+    color: white;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}

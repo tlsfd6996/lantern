@@ -1,0 +1,142 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+body{
+  background-color: #fcee21;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+header{
+  margin-top:25%;
+  margin-bottom:24%;
+}
+img.login_logo {
+    width: 75%;
+    margin-left: auto; margin-right: auto; display: block;
+
+}
+button.btn{
+    width: 86%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-left:7%;
+    margin-right: 7%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+
+    border: none;
+    border-radius: 10px;
+
+
+}
+form.login_btn_form {
+    margin-bottom: 7%;
+    padding-top: 10%;
+}
+button.btn.facebook_login_btn {
+    background-color: #3B5998;
+    color: white;
+
+}
+button.btn.google_login_btn {
+    background-color: white;
+    color: #dc4e41;
+
+}
+
+button.btn.email_login_btn {
+    background-color: #684523;
+    color: white;
+
+}
+img.login_img {
+    width: 8%;
+    float: left;
+    margin: -1% -12% -2% 5%;
+}
+p.notice {
+    float: left;
+    width: 50%;
+    text-align: right;
+}
+p.join {
+    float: left;
+    text-align: left;
+    width: 50%;
+}
+
+a.term_policy {
+    margin-right: 4%;
+    color:#684523;
+}
+a:link{
+  text-decoration: none;
+  color:
+}
+a:visited{
+  text-decoration: none;
+  color:#684523;
+}
+a:active{
+  text-decoration: underline;
+  color:#684523;
+}
+a:hover{
+  text-decoration: underline;
+  color:#684523;
+}
+a.join {
+    margin-left: 4%;
+    color:#684523;
+}
+
+a.login_button_a {
+  color: white;
+  text-decoration: none;
+}
+
+a.login_button_a_goo {
+  color: #dc4e41;
+  text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 15%;
+
+    font-size:small;
+}
+
+td.facebook_login_btn, td.google_login_btn, td.email_login_btn {
+    text-align: center;
+    padding: 4% 0;
+    border-radius: 10px;
+}
+
+td.google_login_btn {
+    background-color: white;
+    color: #dc4e41;
+
+}
+
+td.email_login_btn {
+    background-color: #684523;
+    color: white;
+
+}
+
+td.facebook_login_btn {
+    background-color: #3B5998;
+    color: white;
+
+}
+
+.facebookloginbtn, .googleloginbtn, .emailloginbtn {
+    font-size: large;
+    font-weight: bold;
+}
+
+table.login_table {
+    border-spacing: 0 20px;
+    width: 84%;
+    margin: 0 8%;
+}

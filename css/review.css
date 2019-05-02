@@ -1,0 +1,14 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+th.tabledate {
+    font-size: small;
+    padding-left: 5%;
+    font-weight: lighter;
+}
+img.review_star_icon {
+    width: 5%;
+    margin-top: 2%;
+}
+td.review_contents {
+    padding-top: 4%;
+}

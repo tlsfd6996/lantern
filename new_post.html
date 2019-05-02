@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <head>
+
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      <script type="text/javascript" src="/js/tabmenu.js"></script>
+
+
+      <title>LANTERN</title>
+
+      <!-- Bootstrap Core CSS -->
+      <link href="css/bootstrap.css" rel="stylesheet">
+
+      <!-- Custom CSS -->
+      <link href="css/1-col-portfolio.css" rel="stylesheet">
+      <link href="css/stickyfooter.css" rel="stylesheet">
+      <link href="css/lanterntheme.css" rel="stylesheet">
+      <link href="css/tabmenu.css" rel="stylesheet">
+      <link href="css/new_post.css" rel="stylesheet">
+
+
+
+
+
+      <script>
+  $(document).ready(function() {
+
+  // Hide Header on on scroll down
+  var didScroll;
+  var lastScrollTop = 0;
+  var delta = 5;
+  var navbarHeight = $('header').outerHeight();
+  $(window).scroll(function(event){
+      didScroll = true;
+  });
+  setInterval(function() {
+      if (didScroll) {
+          hasScrolled();
+          didScroll = false;
+      }﻿
+  }, 250);
+  function hasScrolled() {
+      var st = $(this).scrollTop();
+      var y = document.getElementById("navfilter")
+       navbar = document.getElementById("navbar8");
+       t = document.getElementById("container");
+       var i = document.getElementById("navsearch")
+       var j = document.getElementById("navfilter")
+
+      // Make sure they scroll more than delta
+      if(Math.abs(lastScrollTop - st) <= delta)
+          return;
+
+      // If they scrolled down and are past the navbar, add class .nav-up.
+      // This is necessary so you never see what is "behind" the navbar.
+      if (st > lastScrollTop && st > navbarHeight){
+          // Scroll Down
+          $('header').removeClass('nav-down').addClass('nav-up');
+          //$(i).removeClass('navsearchwhite').addClass('navsearch');
+          //$(j).removeClass('navfilter').addClass('navfilterdiscollapse');
+          //x.setAttribute('onclick','myFocusFunction()')
+      } else {
+          // Scroll Up
+          if(st + $(window).height() < $(document).height()) {
+              $('header').removeClass('nav-up').addClass('nav-down');
+              $(t).addClass('marginedcontainer');
+
+
+              //$(y).addClass('navfilterdiscollapse').removeClass('navfilter');
+          }
+      }
+
+      lastScrollTop = st;
+  }
+  });
+  </script>
+
+
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+  </head>
+
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-inverse navbar-static-top example-8">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="leftarrow" onclick="location.href='javascript:history.back()'">
+                <img class="back_arrow_icon" src="./img/uicon/001-arrowhead-thin-outline-to-the-left.png">
+            </button>
+            <button type="button" class="ok_btu">
+                <img class="OK_send_icon" src="./img/uicon/checked.png">
+            </button>
+            <a class="navbar-brand text-hide" href="#">Brand Text</a>
+          </div>
+          <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+      </nav>
+    </header>
+  
+  <!--content-->
+
+
+
+  <table class="new_post_table">
+    <tr>
+      <td colspan="2" class="photo_area">사진 작성 부분</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="post_area"><textarea class="post_area_text" name="post_area_text">게시물 작성 부분</textarea></td>
+    </tr>
+    <tr class="tag_area">
+      <td class="tag_area_td"><img class="post_locationicon" src="./img/uicon/023-location.png">위&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;치</td>
+      <td class="input_area"></td>
+    </tr>
+    <tr class="tag_area">
+      <td class="tag_area_td"><img class="post_dateicon" src="./img/uicon/007-time.png">날&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;짜</td>
+      <td class="input_area"><input type="date" class="post_date"></td>
+    </tr>
+    <tr class="tag_area">
+      <td class="tag_area_td"><img class="post_categoryicon" src="./img/uicon/004-favorite-1.png">카테고리</td>
+      <td class="input_area">
+        <select id="categorys">
+          <option value="">카테고리선택</option>
+          <option value="Local">Local</option>
+          <option value="Music">Music</option>
+          <option value="Foodle">Foodle</option>
+        </select>
+      </td>
+    </tr>
+    <tr class="tag_area">
+      <td class="tag_area_td"><img class="post_priceicon" src="./img/uicon/001-money.png">가&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;격</td>
+      <td class="input_area"><input type="number" id="pricetext">원</td>
+    </tr>
+  </table>
+
+
+
+  <!--footer-->
+  <footer>
+    <div id="footermenu" class="col-xs-12 navbar-inverse navbar-fixed-bottom bottomnav">
+      <div class="row" id="bottomNav">
+        <div class="col-xs-octa text-center"><a href="./favorite.html"><img class="footericon" src="./img/uicon/024-heart-1.png" ></a></div>
+        <div class="col-xs-octa text-center"><a href="./review.html"><img class="footericon" src="./img/uicon/001-interface-1.png" ></a></div>
+        <div class="col-xs-octa text-center"><a href="./main.html"><img class="footericon" src="./img/uicon/029-home.png" ></a></div>
+        <div class="col-xs-octa text-center"><a href="./messenger.html"><img class="footericon" src="./img/uicon/021-send.png" ></a></div>
+        <div class="col-xs-octa text-center"><a href="./myPage.html"><img class="footericon" src="./img/uicon/012-social-1.png" ></a></div>
+      </div>
+    </div>
+      <!— /.row —>
+  </footer>
+
+</div>
+<!— /.container —>
+
+<!— jQuery —>
+<script src="js/jquery.js"></script>
+
+<!— Bootstrap Core JavaScript —>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

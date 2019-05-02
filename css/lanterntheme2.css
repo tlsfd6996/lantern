@@ -1,0 +1,311 @@
+.layer {display:none; position:fixed; _position:absolute; top:0; left:0; width:100%; height:100%; z-index:100;}
+  .layer .bg {position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:.5; filter:alpha(opacity=50);}
+  .layer .pop-layer {display:block;}
+
+
+/*
+  div#category-popup {display:none; position:fixed; _position:absolute; top:0; left:0; width:100%; height:100%; z-index:100;}
+    div#category-popup .bg {position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:.5; filter:alpha(opacity=50);}
+    div#category-popup .pop-layer {display:block;}
+
+
+    div#location-popup {display:none; position:fixed; _position:absolute; top:0; left:0; width:100%; height:100%; z-index:100;}
+      div#location-popup .bg {position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:.5; filter:alpha(opacity=50);}
+      div#location-popup .pop-layer {display:block;}
+
+      div#datepicker-popup {display:none; position:fixed; _position:absolute; top:0; left:0; width:100%; height:100%; z-index:100;}
+        div#datepicker-popup .bg {position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:.5; filter:alpha(opacity=50);}
+        div#datepicker-popup .pop-layer {display:block;}
+
+        div#numberofpeople-popup {display:none; position:fixed; _position:absolute; top:0; left:0; width:100%; height:100%; z-index:100;}
+          div#numberofpeople-popup .bg {position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:.5; filter:alpha(opacity=50);}
+          div#numberofpeople-popup .pop-layer {display:block;}
+  */
+
+.pop-layer {display:none; position: absolute; top: 50%; left: 50%; width: 100%; height:auto;  background-color:#fff; border: 5px solid #3571B5; z-index: 10;}
+.pop-layer .pop-container {padding: 20px 25px;}
+.pop-layer p.ctxt {color: #666; line-height: 25px;}
+.pop-layer .btn-r {width: 100%; margin:10px 0 20px; padding-top: 10px; border-top: 1px solid #DDD; text-align:right;}
+
+a.cbtn {display:inline-block; height:25px; padding:0 14px 0; border:1px solid #304a8a; background-color:#3f5a9d; font-size:13px; color:#fff; line-height:25px;}
+a.cbtn:hover {border: 1px solid #091940; background-color:#1f326a; color:#fff;}
+
+
+.marginedcontainer {
+    margin-top: 15%!important;
+}
+
+
+.todaybody {
+    color: black;
+    text-align: left;
+    margin-left: 5%;
+}
+
+div.titletext {
+    font-size: medium;
+    text-align: left;
+    font-weight: bold;
+    padding-top: 2.5%;
+}
+p.locationtext {
+    font-size: inherit;
+}
+p.categorytext {
+    font-size: inherit;
+}
+.todayuser {
+    font-size: 18px;
+    text-align: left;
+    color: black;
+    margin-bottom:2%;
+}
+.title {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.bodyicon {
+    text-align: right;
+      margin: 2% 2% 0 0;
+}
+.today {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-bottom: 2px solid #e4e4e4;
+}
+img.userimg {
+    width: 75%;
+    margin: 0px 0% 10% 30%;
+}
+img.favoicon, img.shareicon {
+    width: 60%;
+    margin: 0 2% 7.5% 2%
+}
+img.todaybodyicon {
+    width: 5%;
+    margin-right: 2%;
+}
+
+th.tableicon {
+    width: 13%;
+}
+
+th.tableshare, th.tablefavo {
+    width: 10%;
+}
+
+p.todayuserid {
+    margin: 0% 0 1% 5%;
+    font-size: smaller;
+}
+
+
+img.filtericon {
+    width: 7%;
+    margin-right: 3%;
+    margin-left: 2%;
+    margin-top: -1%;
+}
+.marginedcontainer {
+    margin-top: 15%!important;
+}
+
+input#filtersubmit {
+    text-align: center;
+    background-color: #fcee21;
+    border-radius: 20px;
+    color: #1485cc;
+    border: 0 solid;
+}
+.category-btn {
+    text-align: left;
+}
+.location-btn {
+    text-align: left;
+}
+.datepicker-btn {
+    text-align: left;
+}
+.numberofpeople-btn {
+    text-align: left;
+}
+.filtersubmit {
+    text-align: center;
+}
+
+.fbtn {
+    text-align: left;
+    width: 100%;
+    margin-top: 10%;
+    padding: 2.5%;
+    border: 0px solid;
+    background-color: transparent;
+    border-bottom: 3px solid #fcee21;
+    color: white;
+    font-weight: 600;
+
+}
+
+.navbar-inverse {
+    background-color: #FCEE21;
+    /* background-color: #222; */
+    border: 0;
+    border-color: #080808;
+    border-radius: 0 0 40px 40px;
+}
+
+
+.navbar-header {
+    float: left;
+    padding: 8px;
+    text-align: center;
+    width: 100%;
+}
+
+@media only screen and (max-width : 768px){
+  .example-8 .navbar-brand {
+  padding: 0px;
+  transform: translateX(-55%);
+  left: 50%;
+  position: absolute;
+}
+.example-8 .navbar-brand>img {
+  height: 100%;
+  width: auto;
+  padding: 7px 14px;
+}
+}
+
+
+/* EXAMPLE 8 - Center Background */
+.example-8 .navbar-brand {
+  background: url(/img/logo.png) center / contain no-repeat;
+  width: 200px;
+  transform: translateX(-55%);
+  left: 50%;
+  position: fixed;
+}
+
+
+.navbar-toggle {
+    display: none;
+}
+
+
+nav.example-8 {
+    padding-bottom: 1%;
+}
+
+.container>.navbar-header {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+
+body {
+    padding-top: 70px;
+}
+header {
+    background: #FCEE21;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    transition: top 0.2s ease-in-out;
+    width: 100%;
+    z-index: 9999;
+}
+.nav-up {
+    top: -70px;
+}
+
+.navbar-collapse {
+    margin-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.discollapse {
+    display: block;
+    transition: top 0.2s ease-in-out;
+}
+
+
+#imaginary_container{
+    margin-top:17%; /* Don't copy this */
+}
+.stylish-input-group .input-group-addon{
+    background: white !important;
+}
+.stylish-input-group .form-control{
+	border-right:0;
+	box-shadow:0 0 0;
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: transparent;
+}
+
+
+
+.bottomnav {
+    z-index: 9999;
+    background-color: #f1f1f1;
+    border-radius: 0;
+}
+
+
+.form-control {
+  border-radius: 50px;
+  border: 0px solid #ccc;
+}
+
+.input-group-addon {
+      border-radius: 50px;
+  border: 0px solid #ccc;
+}
+
+
+.navfilter {
+  z-index: 9998;
+    height: 435px;
+    background-color: #1485CC;
+}
+
+.navfilterdiscollapse {
+  display: none;
+  z-index: 9998;
+    height: 600px;
+    background-color: #1485CC;
+    transition: top 0.2s ease-in-out;
+}
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: -40px;
+    border: 1px solid transparent;
+}
+
+
+input#navsearch {
+    text-align: center;
+    border-radius: 50px;
+    background: #1485cc;
+    color: white;
+}
+
+.navsearchwhite{
+  text-align: center;
+  border-radius: 50px;
+  color: gray!important;
+    background-color: white!important;
+}
+
+.filterbtn {
+    width: 100%;
+}

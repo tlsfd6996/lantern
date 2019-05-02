@@ -1,0 +1,92 @@
+.container>.navbar-header {
+    margin-right: 0px;
+    margin-left: 0px;
+    text-align: left;
+}
+
+
+table.massageheadtable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #cecece;
+    text-align: center;
+}
+
+td.massagetableid, td.massagefavorite, td.massageinter {
+    border:1px solid white;
+    font-weight: bold;
+}
+
+td.massagefavorite, td.massageinter {
+    height: 45px;
+}
+
+.userprofileimg {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    float: left;
+    margin-left: 27%;
+}
+
+.massagetableidtext {
+    margin-top: 4.5%;
+    margin-right: 37%;
+    font-size: medium;
+}
+
+td.massagetableid {
+    height: 65px;
+}
+
+img.messageheadicon {
+    width: 11%;
+    margin-right: 3%;
+}
+
+.messagebody {
+    height: 387px;
+}
+
+.messagesend {
+    margin-bottom: 11%;
+}
+
+img.messagesendicon {
+    width: 7%;
+    margin-left: 3%;
+    float: left;
+    margin-top: 1%;
+}
+
+.messagebutton {
+    position: relative;
+    width: 15%;
+    left: 79%;
+    bottom: 28px;
+}
+
+input[type="button"] {
+    height: 23px;
+    border: 0;
+    background-color: #4c4c46;
+    color: white;
+    border-radius: 9px;
+    font-size: smaller;
+    width: 103%;
+    text-align: center;
+}
+
+.messagesendtext {
+    margin-left: 23%;
+}
+
+input[type="text"] {
+    width: 96%;
+    height: 34px;
+    text-align: left;
+    padding-left: 4%;
+    border: 0;
+    background-color: #cecece;
+    border-radius: 10px;
+}

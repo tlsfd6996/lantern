@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <head>
+
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      <title>LANTERN</title>
+
+      <!-- Bootstrap Core CSS -->
+      <link href="css/bootstrap.css" rel="stylesheet">
+
+      <!-- Custom CSS -->
+      <link href="css/1-col-portfolio.css" rel="stylesheet">
+      <link href="css/stickyfooter.css" rel="stylesheet">
+      <link href="css/lanterntheme.css" rel="stylesheet">
+
+      <link href="css/detail.css" rel="stylesheet">
+
+
+
+
+      <script>
+  $(document).ready(function() {
+
+  // Hide Header on on scroll down
+  var didScroll;
+  var lastScrollTop = 0;
+  var delta = 5;
+  var navbarHeight = $('header').outerHeight();
+  $(window).scroll(function(event){
+      didScroll = true;
+  });
+  setInterval(function() {
+      if (didScroll) {
+          hasScrolled();
+          didScroll = false;
+      }﻿
+  }, 250);
+  function hasScrolled() {
+      var st = $(this).scrollTop();
+      var y = document.getElementById("navfilter")
+       navbar = document.getElementById("navbar8");
+       t = document.getElementById("container");
+       var i = document.getElementById("navsearch")
+       var j = document.getElementById("navfilter")
+
+      // Make sure they scroll more than delta
+      if(Math.abs(lastScrollTop - st) <= delta)
+          return;
+
+      // If they scrolled down and are past the navbar, add class .nav-up.
+      // This is necessary so you never see what is "behind" the navbar.
+      if (st > lastScrollTop && st > navbarHeight){
+          // Scroll Down
+          $('header').removeClass('nav-down').addClass('nav-up');
+          $(navbar).removeClass('discollapse').addClass('collapse');
+          //$(i).removeClass('navsearchwhite').addClass('navsearch');
+          //$(j).removeClass('navfilter').addClass('navfilterdiscollapse');
+          //x.setAttribute('onclick','myFocusFunction()')
+      } else {
+          // Scroll Up
+          if(st + $(window).height() < $(document).height()) {
+              $('header').removeClass('nav-up').addClass('nav-down');
+              $(navbar).removeClass('collapse').addClass('discollapse');
+              $(t).addClass('marginedcontainer');
+
+
+              //$(y).addClass('navfilterdiscollapse').removeClass('navfilter');
+          }
+      }
+
+      lastScrollTop = st;
+  }
+  });
+  </script>
+
+
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+  </head>
+
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-inverse navbar-static-top example-8">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="leftarrow" onclick="location.href='javascript:history.back()'">
+                <img class="back_arrow_icon" src="./img/uicon/001-arrowhead-thin-outline-to-the-left.png">
+            </button>
+            <a class="navbar-brand text-hide" href="#">Brand Text</a>
+          </div>
+          <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+      </nav>
+    </header>
+
+
+
+
+
+    <section>
+      <div id="container">
+
+        <div class="detail">
+          <div class="detailuser">
+            <table>
+            <tr>
+              <th class="tableicon"><div class="userprofileimg" style="background-image: url(./img/profile/me.jpg);"></div></th>
+              <th class="tableid"><p class="detailuserid">Kiunt</p></th>
+              <th class="tabledoticon"><a href="#"><img class="doticon" src="./img/uicon/more-button-of-three-dots.png"></a></th>
+            </tr>
+            </table>
+          </div>
+
+            <div class="detailimg">
+                <a href="#">
+                    <img class="img-responsive" src="./img/contents/hanamura.jpg" alt="">
+                </a>
+            </div>
+
+
+
+
+          <div class="detailbody">
+            <div class="detailbodyheader">
+
+              <div class="like">2,452 Likes</div>
+
+              <div class="detailbodyicons">
+                <img class="detail_icons" src="./img/uicon/030-heart.png">
+                <img class="detail_icons" src="./img/uicon/027-star.png">
+                <img class="detail_icons" src="./img/uicon/021-send.png">
+              </div>
+
+            </div>
+
+            <div class="detailtitletext">메르시와 떠나는 하나무라 벚꽃 축제</div>
+
+            <div class="bodytext">현지인 메르시와 함께 하나무라의 풍경과 문화를 즐겨봐요 :D !</div>
+
+            <table class="bodytable">
+              <tr>
+                <th class="tablehead">CATEGORY</th>
+                <td class="tablebody">LOCAL</td>
+              </tr>
+              <tr>
+                <th class="tablehead">TERM</th>
+                <td class="tablebody">10/10 ~ 10/25</td>
+              </tr>
+            </table>
+
+          </div>
+
+           <div class="comments">
+
+              <div class="comment">
+                <table class="comment_table">
+                  <tr>
+                    <th rowspan="2" class="comment_profileicon"><div class="userprofileimg" style="background-image: url(./img/profile/me.jpg);"></div></th>
+                    <th class="comment_id">abcd</th>
+                    <th class="comment_date">2016.10.10</th>
+                    <th rowspan="2" class="comment_edit"><img class="detail_edit_icons" src="./img/uicon/draw.png"><img class="detail_edit_icons" src="./img/uicon/006-interface.png"></th>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="comment_body">hi</td>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="comment">
+                <table class="comment_table">
+                  <tr>
+                    <th rowspan="2" class="comment_profileicon"><div class="userprofileimg" style="background-image: url(./img/profile/me.jpg);"></div></th>
+                    <th class="comment_id">abdsd</th>
+                    <th class="comment_date">2016.04.10</th>
+                    <th rowspan="2" class="comment_edit"><img class="detail_edit_icons" src="./img/uicon/draw.png"><img class="detail_edit_icons" src="./img/uicon/006-interface.png"></th>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="comment_body">hello</td>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="comment">
+                <table class="comment_table">
+                  <tr>
+                    <th rowspan="2" class="comment_profileicon"><div class="userprofileimg" style="background-image: url(./img/profile/me.jpg);"></div></th>
+                    <th class="comment_id">asdfz</th>
+                    <th class="comment_date">2016.10.25</th>
+                    <th rowspan="2" class="comment_edit"><img class="detail_edit_icons" src="./img/uicon/draw.png"><img class="detail_edit_icons" src="./img/uicon/006-interface.png"></th>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="comment_body">good job</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+
+
+            <div class="add_comment">
+              <div class="commnetuserprofile">
+                <div class="userprofileimg" style="background-image: url(./img/profile/me.jpg);"></div>
+              </div>
+              <div class="comment_textedit">
+                  <input type="text" value="" name="comment_text">
+              </div>
+              <div class="comment_okbth">
+                  <input type="button" value="OK" name="comment_ok">
+              </div>
+            </div>
+
+
+        </div>
+      </div>
+
+    </section>
+
+
+
+    <footer>
+      <div id="footermenu" class="col-xs-12 navbar-inverse navbar-fixed-bottom bottomnav">
+        <div class="row" id="bottomNav">
+          <p class="reservation-btn">RESERVATION</p>
+        </div>
+      </div>
+        <!— /.row —>
+    </footer>
+
+</body>

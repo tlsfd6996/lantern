@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <head>
+
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      <script type="text/javascript" src="/js/tabmenu.js"></script>
+
+
+      <title>LANTERN</title>
+
+      <!-- Bootstrap Core CSS -->
+      <link href="css/bootstrap.css" rel="stylesheet">
+
+      <!-- Custom CSS -->
+      <link href="css/1-col-portfolio.css" rel="stylesheet">
+      <link href="css/stickyfooter.css" rel="stylesheet">
+      <link href="css/lanterntheme.css" rel="stylesheet">
+      <link href="css/tabmenu.css" rel="stylesheet">
+      <link href="css/join.css" rel="stylesheet">
+
+
+
+
+      <script>
+  $(document).ready(function() {
+
+  // Hide Header on on scroll down
+  var didScroll;
+  var lastScrollTop = 0;
+  var delta = 5;
+  var navbarHeight = $('header').outerHeight();
+  $(window).scroll(function(event){
+      didScroll = true;
+  });
+  setInterval(function() {
+      if (didScroll) {
+          hasScrolled();
+          didScroll = false;
+      }﻿
+  }, 250);
+  function hasScrolled() {
+      var st = $(this).scrollTop();
+      var y = document.getElementById("navfilter")
+       navbar = document.getElementById("navbar8");
+       t = document.getElementById("container");
+       var i = document.getElementById("navsearch")
+       var j = document.getElementById("navfilter")
+
+      // Make sure they scroll more than delta
+      if(Math.abs(lastScrollTop - st) <= delta)
+          return;
+
+      // If they scrolled down and are past the navbar, add class .nav-up.
+      // This is necessary so you never see what is "behind" the navbar.
+      if (st > lastScrollTop && st > navbarHeight){
+          // Scroll Down
+          $('header').removeClass('nav-down').addClass('nav-up');
+          $(navbar).removeClass('discollapse').addClass('collapse');
+          //$(i).removeClass('navsearchwhite').addClass('navsearch');
+          //$(j).removeClass('navfilter').addClass('navfilterdiscollapse');
+          //x.setAttribute('onclick','myFocusFunction()')
+      } else {
+          // Scroll Up
+          if(st + $(window).height() < $(document).height()) {
+              $('header').removeClass('nav-up').addClass('nav-down');
+              $(navbar).removeClass('collapse').addClass('discollapse');
+              $(t).addClass('marginedcontainer');
+
+
+              //$(y).addClass('navfilterdiscollapse').removeClass('navfilter');
+          }
+      }
+
+      lastScrollTop = st;
+  }
+  });
+  </script>
+
+
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+  </head>
+
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-inverse navbar-static-top example-8">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar8">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand text-hide" href="#">Brand Text</a>
+            <div id="navbar8" class="navbar-collapse collapse">
+              <div id="imaginary_container">
+                <div class="input-group stylish-input-group filterbtn">
+                    <input type="button" id ="navsearch" class="form-control"  value="FIND YOUR LANTERN"  onclick="myFocusFunction()">
+                    <!--<span class="input-group-addon">
+                        <button type="submit" onclick="myunFocusFunction()">
+                            <span class="glyphicon glyphicon-filter"></span>
+                        </button>
+                    </span>-->
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <!--/.nav-collapse -->
+        </div>
+
+        <!--/.container-fluid -->
+      </nav>
+
+
+
+
+      <div class="container navfilterdiscollapse" id="navfilter">
+
+          <script type="text/javascript">
+            function layer_open(el){
+
+              var temp = $('#' + el);
+              var bg = temp.prev().hasClass('bg');	//dimmed 레이어를 감지하기 위한 boolean 변수
+
+              if(bg){
+                $('.'+el).fadeIn();	//'bg' 클래스가 존재하면 레이어가 나타나고 배경은 dimmed 된다.
+              }else{
+                temp.fadeIn();
+              }
+
+              // 화면의 중앙에 레이어를 띄운다.
+              if (temp.outerHeight() < $(document).height() ) temp.css('margin-top', 50+'%');
+              else temp.css('top', '0px');
+              if (temp.outerWidth() < $(document).width() ) temp.css('margin-left', '-'+temp.outerWidth()/2+'px');
+              else temp.css('left', '0px');
+
+              temp.find('a.cbtn').click(function(e){
+                if(bg){
+                  $('.'+el).fadeOut(); //'bg' 클래스가 존재하면 레이어를 사라지게 한다.
+                }else{
+                  temp.fadeOut();
+                }
+                e.preventDefault();
+              });
+
+              $('.layer .bg').click(function(e){	//배경을 클릭하면 레이어를 사라지게 하는 이벤트 핸들러
+                $('.'+el).fadeOut();
+                e.preventDefault();
+              });
+
+            }
+          </script>
+          <div class="bg"></div>
+
+
+          <!--// 카테고리 버튼눌렀을때 셀렉터 나오는 부분-->
+          <div id="category-popup" class="pop-layer category-popup">
+            <div class="pop-container">
+              <div class="pop-conts">
+                <!--content //-->
+                <p class="ctxt mb20">팝업새끼야되라<br>
+                  카테고리 버튼이야 제발!!!!!!!!!!
+                </p>
+
+                <div class="btn-r">
+                  <a href="#" class="cbtn">Close</a>
+                </div>
+                <!--// content-->
+              </div>
+            </div>
+          </div>
+
+          <!--// 로케이션 버튼눌렀을때 셀렉터 나오는 부분-->
+          <div id="location-popup" class="pop-layer loaction-popup">
+            <div class="pop-container">
+              <div class="pop-conts">
+                <!--content //-->
+                <p class="ctxt mb20">팝업새끼야되라<br>
+                  이건 로케이션 버튼이고 제발!!!!!!!!!!
+                  <form>
+                        <input id="geocomplete" type="text" placeholder="Type in an address" size="90" />
+                        <input id="find" type="button" value="find" />
+                      </form>
+
+                      <div class="map_canvas"></div>
+
+                      <pre id="logger">Log:</pre>
+
+                      <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCkAdKtVn-cNhtsIhL4Nhvo45skO7XXCeU&sensor=false&&libraries=places"></script>
+                      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+                      <script src="./js/jquery.geocomplete.js"></script>
+                      <script src="./js/logger.js"></script>
+
+                      <script>
+                        $(function(){
+
+                          var options = {
+                            map: ".map_canvas"
+                          };
+
+                          $("#geocomplete").geocomplete(options)
+                            .bind("geocode:result", function(event, result){
+                              $.log("Result: " + result.formatted_address);
+                            })
+                            .bind("geocode:error", function(event, status){
+                              $.log("ERROR: " + status);
+                            })
+                            .bind("geocode:multiple", function(event, results){
+                              $.log("Multiple: " + results.length + " results found");
+                            });
+
+                          $("#find").click(function(){
+                            $("#geocomplete").trigger("geocode");
+                          });
+
+                          $("#examples a").click(function(){
+                            $("#geocomplete").val($(this).text()).trigger("geocode");
+                            return false;
+                          });
+
+                        });
+                      </script>
+
+                <div class="btn-r">
+                  <a href="#" class="cbtn">Close</a>
+                </div>
+                <!--// content-->
+              </div>
+            </div>
+          </div>
+
+          <!--// 데이트 버튼눌렀을때 셀렉터 나오는 부분-->
+          <div id="datepicker-popup" class="pop-layer datepicker-popup">
+            <div class="pop-container">
+              <div class="pop-conts">
+                <!--content //-->
+                  <input type="date" name="date" />
+                  <input type="date" name="date" />
+                <div class="btn-r">
+                  <a href="#" class="cbtn">Close</a>
+                </div>
+                <!--// content-->
+              </div>
+            </div>
+          </div>
+
+          <!--// 사람수 버튼눌렀을때 셀렉터 나오는 부분-->
+          <div id="numberofpeople-popup" class="pop-layer numberofpeople-popup">
+            <div class="pop-container">
+              <div class="pop-conts">
+                <!--content //-->
+                <p class="ctxt mb20">팝업새끼야되라<br>
+                  그래 샛꺄 이것도 떠라 제발!!!!!!!!!!
+                </p>
+
+                <div class="btn-r">
+                  <a href="#" class="cbtn">Close</a>
+                </div>
+                <!--// content-->
+              </div>
+            </div>
+          </div>
+        <button id ="category"  class="category-btn fbtn"  value="CATEGORY"  onclick="layer_open('category-popup');return false;"><img class="filtericon" src="./img/uicon-white/004-favorite-1.png"/> CATEGORY</button>
+        <button id ="location" class="location-btn fbtn"  value="LOCATION"  onclick="layer_open('location-popup');return false;"><img class="filtericon" src="./img/uicon-white/023-location.png"/> LOCATION</button>
+        <button id ="datepicker" class="datepicker-btn fbtn"  value="DATEPICKER"  onclick="layer_open('datepicker-popup');return false;"><img class="filtericon" src="./img/uicon-white/007-time.png"/> DATE</button>
+        <button id ="numberofpeople" class="numberofpeople-btn fbtn"  value="NUMBER OF PEOPLE"  onclick="layer_open('numberofpeople-popup');return false;"><img class="filtericon" src="./img/uicon-white/002-social-2.png"/> NUMBER OF PEOPLE</button>
+        <input type="submit" id ="filtersubmit" class="fbtn filtersubmit-btn"  value="SUBMIT"  onclick="myunFocusFunction()">
+      </div>
+
+      <script>
+      var x = document.getElementById("navsearch")
+      var y = document.getElementById("navfilter")
+
+      var screen_width = document.documentElement.clientWidth;
+      var screen_height = window.outerHeight;
+
+      x.addEventListener("onclick", myFocusFunction, true);
+
+      function myFocusFunction() {
+          document.getElementById("navfilter").style.height=(screen_height-90)+"px";
+          document.getElementById("navfilter").style.paddingTop=15+"%";
+          $(x).removeClass('navsearch').addClass('navsearchwhite');
+          $(y).removeClass('navfilterdiscollapse').addClass('navfilter');
+          x.setAttribute('onclick','myunFocusFunction()')
+
+      }
+      function myunFocusFunction() {
+          $(x).removeClass('navsearchwhite').addClass('navsearch');
+          $(y).removeClass('navfilter').addClass('navfilterdiscollapse');
+          x.setAttribute('onclick','myFocusFunction()')
+      }
+      </script>
+    </header>
+  </header>
+  <div class="div_wrap">
+
+    <div class="content">
+
+
+            <div class="d2">
+              <form method="post" name="join_form" action="join.php">
+                <table name="join_table" border="1" class="join_table" cellspacing="3" cellpadding="3">
+                  <tr><td><input type="text" name="id" class="join_input" placeholder="UserID"></td></tr>
+                  <tr><td><input type="password" name="password" class="join_input" placeholder="Password"></td></tr>
+                  <tr><td><input type="password" name="password_check" class="join_input" placeholder="Password Check"></td></tr>
+                  <tr><td><input type="text" name="email" class="join_input" placeholder="Email"></td></tr>
+                  <tr><td><input type="text" name="phone" class="join_input" placeholder="Phone"></td></tr>
+                  <tr><td><input type="text" name="gender" class="join_input" placeholder="Email"gender></td></tr>
+                  <tr><td><input type="text" name="certified" class="join_input" placeholder="Certified"></td></tr>
+                  <tr><td><input type="text" name="BirthDay" class="join_input" placeholder="BirthDay"></td></tr>
+                </table>
+              </form>
+            </div>
+
+
+
+    </div>
+  </div>
+
+
+  <footer>
+
+  </footer>
+
+</body>

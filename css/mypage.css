@@ -1,0 +1,90 @@
+.profile_div {
+    background-color: #EFEDED;
+    margin-top:-3%;
+}
+img.profile_photo {
+    width: 24%;
+    margin-left: 38%;
+    margin-right: 38%;
+    margin-top:6%;
+}
+p.user_id {
+    font-size: medium;
+    width: 26%;
+    margin-left: 38%;
+    margin-right: 36%;
+    margin-top: 3%;
+    padding-bottom: 6%;
+}
+table.profile_table {
+    border: none;
+}
+td {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    padding-left: 4%;
+    border-bottom: solid 1px lightgray;
+}
+table.profile_table {
+
+    width: 100%;
+
+    /*
+    margin-left: 10%;
+    margin-right: 10%;
+    */
+    height: 288px;
+}
+/*
+td.space_td {
+    background-color: lightgray;
+    padding: 0%;
+}*/
+input.gender_radio_btn {
+    background-color: white;
+    margin-right: 2%;
+}
+input.change_btn {
+    float: right;
+    margin-right: 3%;
+    width: 25%;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    font-size: smaller;
+    background-color: #1485CC;
+    color: white;
+}
+img.change_photo_btn {
+    width: 8%;
+    position: absolute;
+    margin-left: 56%;
+    margin-top: -8%;
+}
+td.withdrawal {
+    color: darkred;
+}
+a{
+  color: #474747;
+}
+a.favorite_lantern{
+    color: #474747 !important;
+    text-decoration: none;
+}
+a:link{
+  text-decoration: none;
+  color: #474747;
+}
+a:visited{
+  text-decoration: none;
+  color: #474747;
+}
+a:active{
+  text-decoration: none;
+  color: #474747;
+}
+a:hover{
+  text-decoration: none;
+  color: #474747;
+}
